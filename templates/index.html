@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeSpace Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar-left">
+            <div class="profile-card">
+                <span class="avatar">👤</span>
+                <div>
+                    <h3>Alex_Vibe</h3>
+                    <p class="status-online">● Online</p>
+                </div>
+            </div>
+
+            <div class="stories-header">
+                <h3>Stories ✨</h3>
+                <button id="addStoryBtn" class="btn-purple">+ Add Story</button>
+            </div>
+            <div id="storiesContainer" class="stories-list"></div>
+        </aside>
+
+        <main class="chat-panel">
+            <header class="chat-header">
+                <h2>Chatting with @Sam</h2>
+            </header>
+            
+            <div id="chatDisplay" class="chat-box"></div>
+
+            <div class="chat-controls">
+                <div class="media-actions">
+                    <button class="btn-secondary">🎤 Voice</button>
+                    <button class="btn-secondary">🖼️ Image</button>
+                    <button class="btn-secondary">📁 File</button>
+                </div>
+                <div class="input-row">
+                    <input type="text" id="messageInput" placeholder="Type a message..." />
+                    <button id="sendBtn" class="btn-pink">Send 🚀</button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3>Style AI 🤖</h3>
+            <p class="subtitle">Context-aware outfit suggestions</p>
+            <div id="aiOutput" class="ai-box">Click below to generate an outfit idea!</div>
+            <button id="aiBtn" class="btn-purple full-width">Get Outfit Idea 👗</button>
+        </aside>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
